@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Tools.InnoSetup</id>
-        <version>5.5.4</version>
+        <version>5.5.5</version>
         <title>Inno Setup tools</title>
         <authors>Vaclav Slavik, Jordan Russell</authors>
         <licenseUrl>https://github.com/vslavik/nuget-tools-innosetup/blob/master/license.txt</licenseUrl>
