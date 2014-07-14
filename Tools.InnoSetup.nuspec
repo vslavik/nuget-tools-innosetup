@@ -8,6 +8,7 @@
         <licenseUrl>https://github.com/vslavik/nuget-tools-innosetup/blob/master/license.txt</licenseUrl>
         <projectUrl>https://github.com/vslavik/nuget-tools-innosetup</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <summary>Inno Setup tools packaged for NuGet.</summary>
         <description>Inno Setup tools packaged for NuGet.
 
 This is an unofficial package of the Inno Setup installer, intended for use as
