@@ -23,6 +23,6 @@ spec and other support files are in the public domain.
 
 ---
 
-I'm @vslavik on Twitter and App.net
+I'm @vslavik on Twitter
 
 https://github.com/vslavik/nuget-tools-innosetup
