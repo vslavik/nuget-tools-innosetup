@@ -46,6 +46,7 @@ following:
         <file src="c:\Program Files (x86)\Inno Setup 5\isunzlib.dll" target="tools" />
         <file src="c:\Program Files (x86)\Inno Setup 5\iszlib.dll" target="tools" />
         <file src="c:\Program Files (x86)\Inno Setup 5\Languages\*.isl" target="tools\Languages" />
+        <file src="c:\Program Files (x86)\Inno Setup 5\Languages\*.islu" target="tools\Languages" />
         <file src="c:\Program Files (x86)\Inno Setup 5\Setup.e32" target="tools" />
         <file src="c:\Program Files (x86)\Inno Setup 5\SetupLdr.e32" target="tools" />
         <file src="c:\Program Files (x86)\Inno Setup 5\WizModernImage-IS.bmp" target="tools" />
