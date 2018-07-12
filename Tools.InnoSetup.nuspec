@@ -24,7 +24,7 @@ following:
         </description>
         <copyright>Jordan Russell {http://www.jrsoftware.org/}</copyright>
         <language>en-US</language>
-        <tags>installer inno inoosetup</tags>
+        <tags>installer inno innosetup</tags>
     </metadata>
 
     <files>
