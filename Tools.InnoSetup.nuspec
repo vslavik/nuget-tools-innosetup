@@ -5,7 +5,7 @@
         <version>6.0.2</version>
         <title>Inno Setup tools</title>
         <authors>Vaclav Slavik, Jordan Russell</authors>
-        <licenseUrl>https://github.com/vslavik/nuget-tools-innosetup/blob/master/license.txt</licenseUrl>
+        <license type="file">license.txt</license>
         <projectUrl>https://github.com/vslavik/nuget-tools-innosetup</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <summary>Inno Setup tools packaged for NuGet.</summary>
