@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Tools.InnoSetup</id>
-        <version>5.6.1</version>
+        <version>6.0.2</version>
         <title>Inno Setup tools</title>
         <authors>Vaclav Slavik, Jordan Russell</authors>
         <licenseUrl>https://github.com/vslavik/nuget-tools-innosetup/blob/master/license.txt</licenseUrl>
@@ -31,27 +31,27 @@ following:
         <file src="license.txt" target="" />
         <file src="readme.txt" target="" />
 
-        <file src="c:\Program Files (x86)\Inno Setup 5\Default.isl" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\isbunzip.dll" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\isbzip.dll" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\ISCC.exe" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\ISCmplr.dll" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\ISCrypt.dll" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\islzma.dll" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\islzma32.exe" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\islzma64.exe" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\ISPP.dll" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\ISPPBuiltins.iss" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\isscint.dll" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\isunzlib.dll" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\iszlib.dll" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\Languages\*.isl" target="tools\Languages" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\Languages\*.islu" target="tools\Languages" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\Setup.e32" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\SetupLdr.e32" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\WizModernImage-IS.bmp" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\WizModernImage.bmp" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\WizModernSmallImage-IS.bmp" target="tools" />
-        <file src="c:\Program Files (x86)\Inno Setup 5\WizModernSmallImage.bmp" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\Default.isl" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\isbunzip.dll" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\isbzip.dll" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\ISCC.exe" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\ISCmplr.dll" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\ISCrypt.dll" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\islzma.dll" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\islzma32.exe" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\islzma64.exe" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\ISPP.dll" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\ISPPBuiltins.iss" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\isscint.dll" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\isunzlib.dll" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\iszlib.dll" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\Languages\*.isl" target="tools\Languages" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\Languages\*.islu" target="tools\Languages" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\Setup.e32" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\SetupLdr.e32" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\WizModernImage-IS.bmp" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\WizModernImage.bmp" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\WizModernSmallImage-IS.bmp" target="tools" />
+        <file src="c:\Program Files (x86)\Inno Setup 6\WizModernSmallImage.bmp" target="tools" />
     </files>
 </package>
