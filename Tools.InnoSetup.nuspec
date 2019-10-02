@@ -31,6 +31,8 @@ following:
         <file src="license.txt" target="" />
         <file src="readme.txt" target="" />
 
+        <file src="Tools.InnoSetup.props" target="build" />
+
         <file src="c:\Program Files (x86)\Inno Setup 6\Default.isl" target="tools" />
         <file src="c:\Program Files (x86)\Inno Setup 6\isbunzip.dll" target="tools" />
         <file src="c:\Program Files (x86)\Inno Setup 6\isbzip.dll" target="tools" />
