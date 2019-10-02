@@ -2,5 +2,6 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <InnoSetupDir>$(MSBuildThisFileDirectory)..\tools\</InnoSetupDir>
+    <InnoSetupCompiler>$(MSBuildThisFileDirectory)..\tools\ISCC.exe</InnoSetupCompiler>
   </PropertyGroup>
 </Project>
