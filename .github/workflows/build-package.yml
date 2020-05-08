@@ -1,0 +1,53 @@
+name: Build NuGet package
+
+env:
+  INNO_VERSION: 6.0.3
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build package
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: nuget/setup-nuget@v1
+
+    - name: Download Inno Setup installer
+      run: curl -L -o installer.exe http://files.jrsoftware.org/is/6/innosetup-${{ env.INNO_VERSION }}.exe
+
+    - name: Install Inno Setup
+      run: ./installer.exe /verysilent /allusers /dir=inst
+
+    - name: Download encryption module
+      run: curl -L -o inst/ISCrypt.dll https://jrsoftware.org/download.php/iscrypt.dll
+
+    - name: Build NuGet package
+      run: nuget pack Tools.InnoSetup.nuspec
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: nuget-package
+        path: "*.nupkg"
+
+
+  publish:
+    name: Publish release to NuGet
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: windows-latest
+    needs: build
+    steps:
+      - name: Fetch artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: nuget-package
+
+      - uses: nuget/setup-nuget@v1
+        with:
+          nuget-api-key: ${{ secrets.NUGET_API_KEY }}
+          nuget-api-key-source: https://www.nuget.org/api/v2/package
+
+      - name: Publish to NuGet
+        run: nuget push *.nupkg -Source https://www.nuget.org/api/v2/package
