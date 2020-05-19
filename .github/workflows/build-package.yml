@@ -1,7 +1,7 @@
 name: Build NuGet package
 
 env:
-  INNO_VERSION: 6.0.4
+  INNO_VERSION: 6.0.5-dev
 
 on: [push, pull_request]
 
