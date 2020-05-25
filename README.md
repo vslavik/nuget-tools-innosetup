@@ -2,6 +2,8 @@
 NuGet package for Inno Setup
 ============================
 
+[![NuGet Version and Downloads count](https://buildstats.info/nuget/Tools.InnoSetup)](https://www.nuget.org/packages/Tools.InnoSetup)
+
 This is an unofficial package of the Inno Setup installer, intended for use as
 a NuGet dependency. It is published to the
 [nuget.org repository](https://www.nuget.org/packages/Tools.InnoSetup/).
