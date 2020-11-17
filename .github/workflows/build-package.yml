@@ -23,8 +23,11 @@ jobs:
     - name: Download encryption module
       run: curl -L -o inst/ISCrypt.dll https://jrsoftware.org/download.php/iscrypt.dll
 
+    - name: List installed files
+      run: gci inst -Recurse -File
+
     - name: Build NuGet package
-      run: nuget pack Tools.InnoSetup.nuspec
+      run: nuget pack Tools.InnoSetup.nuspec -Verbosity detailed
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
