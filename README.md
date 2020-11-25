@@ -25,6 +25,22 @@ dotnet add package Tools.InnoSetup
 ```
 
 
+How to use
+----------
+
+1. Create your Inno Setup Script, let's name it `MyInnoSetupScript.iss`.
+2. Add the target to the end of your `.csproj` file:
+```xml
+<Project ...>
+  ...
+  <Target Name="AfterBuild">
+    <Exec Command="$(InnoSetupCompiler) MyInnoSetupScript.iss" />
+  </Target>
+</Project>
+```
+3. Build your project. The installer file will be generated according to the settings in the Inno Setup Script file.
+
+
 How to build it
 ---------------
 
