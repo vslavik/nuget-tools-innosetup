@@ -30,30 +30,8 @@ following:
     <files>
         <file src="license.txt" target="" />
         <file src="README.md" target="" />
-
         <file src="Tools.InnoSetup.props" target="build" />
-
-        <file src="inst\Default.isl" target="tools" />
-        <file src="inst\isbunzip.dll" target="tools" />
-        <file src="inst\isbzip.dll" target="tools" />
-        <file src="inst\ISCC.exe" target="tools" />
-        <file src="inst\ISCmplr.dll" target="tools" />
-        <file src="inst\ISCrypt.dll" target="tools" />
-        <file src="inst\islzma.dll" target="tools" />
-        <file src="inst\islzma32.exe" target="tools" />
-        <file src="inst\islzma64.exe" target="tools" />
-        <file src="inst\ISPP.dll" target="tools" />
-        <file src="inst\ISPPBuiltins.iss" target="tools" />
-        <file src="inst\isscint.dll" target="tools" />
-        <file src="inst\isunzlib.dll" target="tools" />
-        <file src="inst\iszlib.dll" target="tools" />
+        <file src="inst\*.*" exclude="unins000.*" target="tools" />
         <file src="inst\Languages\*.isl" target="tools\Languages" />
-        <file src="inst\Languages\*.islu" target="tools\Languages" />
-        <file src="inst\Setup.e32" target="tools" />
-        <file src="inst\SetupLdr.e32" target="tools" />
-        <file src="inst\WizModernImage-IS.bmp" target="tools" />
-        <file src="inst\WizModernImage.bmp" target="tools" />
-        <file src="inst\WizModernSmallImage-IS.bmp" target="tools" />
-        <file src="inst\WizModernSmallImage.bmp" target="tools" />
     </files>
 </package>
