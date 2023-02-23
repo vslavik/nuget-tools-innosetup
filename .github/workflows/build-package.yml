@@ -18,7 +18,7 @@ jobs:
       run: curl -L -o installer.exe http://files.jrsoftware.org/is/6/innosetup-${{ env.INNO_VERSION }}.exe
 
     - name: Install Inno Setup
-      run: ./installer.exe /verysilent /allusers /dir=inst
+      run: Start-Process ./installer.exe -NoNewWindow -Wait -ArgumentList "/verysilent /allusers /dir=inst"
 
     - name: Download encryption module
       run: curl -L -o inst/ISCrypt.dll https://jrsoftware.org/download.php/iscrypt.dll
