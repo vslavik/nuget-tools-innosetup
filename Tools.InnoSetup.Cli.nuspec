@@ -34,7 +34,6 @@
         <file src="dotnet-tool\bin\Release\net6.0\publish\**" target="tools\net6.0\any" />
         <file src="license.txt" target="" />
         <file src="README.md" target="" />
-        <file src="inst\*.*" exclude="unins000.*" target="tools\InnoSetup" />
-        <file src="inst\Languages\*.isl" target="tools\InnoSetup\Languages" />
+        <file src="inst\**" exclude="inst\unins000.*;inst\Examples\**" target="tools\InnoSetup" />
     </files>
 </package>
