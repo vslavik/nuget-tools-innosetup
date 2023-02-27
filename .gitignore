@@ -1,1 +1,5 @@
 *.nupkg
+inst/
+bin/
+obj/
+FileContentIndex

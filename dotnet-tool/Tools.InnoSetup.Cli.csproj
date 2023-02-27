@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <CopyOutputSymbolsToPublishDirectory>false</CopyOutputSymbolsToPublishDirectory>
+        <PackageOutputPath>../</PackageOutputPath>
+        <NuspecFile>../Tools.InnoSetup.Cli.nuspec</NuspecFile>
+        <PackAsTool>true</PackAsTool>
+        <LangVersion>10.0</LangVersion>
+        <NuspecProperties>version=$(Version)</NuspecProperties>
+    </PropertyGroup>
+
+    <!-- For some reason include a NuspecFile breaks DotnetToolSettings.xml generation, so add this
+    file manually -->
+    <ItemGroup>
+        <None Update="DotnetToolSettings.xml" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+</Project>
+  

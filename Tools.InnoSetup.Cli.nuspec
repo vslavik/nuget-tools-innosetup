@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Tools.InnoSetup.Cli</id>
+        <version>$version$</version>
+        <title>Inno Setup with dotnet tool support</title>
+        <authors>Vaclav Slavik, Jordan Russell</authors>
+        <license type="file">license.txt</license>
+        <projectUrl>https://github.com/vslavik/nuget-tools-innosetup</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <summary>Inno Setup tools packaged for NuGet.</summary>
+        <description>Inno Setup tools packaged for NuGet.
+
+            This is an unofficial package of the Inno Setup installer, intended for use as
+            a NuGet dependency.
+
+            This package is kept up to date and with upstream IS releases and includes the
+            following:
+
+            - Unicode build of Inno Setup
+            - Inno Setup Preprocessor
+            - encryption support
+            - official translations of Inno Setup
+        </description>
+        <copyright>Jordan Russell {http://www.jrsoftware.org/}</copyright>
+        <language>en-US</language>
+        <tags>installer inno innosetup</tags>
+        <packageTypes>
+            <packageType name="DotnetTool" />
+        </packageTypes>
+    </metadata>
+
+    <files>
+        <file src="dotnet-tool\bin\Release\net6.0\publish\**" target="tools\net6.0\any" />
+        <file src="license.txt" target="" />
+        <file src="README.md" target="" />
+        <file src="inst\*.*" exclude="unins000.*" target="tools\InnoSetup" />
+        <file src="inst\Languages\*.isl" target="tools\InnoSetup\Languages" />
+    </files>
+</package>

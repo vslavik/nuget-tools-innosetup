@@ -20,8 +20,15 @@ following:
 How to install
 --------------
 
+Nuget:
 ```
 dotnet add package Tools.InnoSetup
+```
+
+Dotnet Tool:
+```
+dotnet tool install Tools.InnoSetup.Cli
+GetISCCPath
 ```
 
 

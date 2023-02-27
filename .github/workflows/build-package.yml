@@ -29,12 +29,14 @@ jobs:
     - name: Build NuGet package
       run: nuget pack Tools.InnoSetup.nuspec -Verbosity detailed
 
+    - name: Build Dotnet Tool package
+      run: dotnet pack ./dotnet-tool/Tools.InnoSetup.Cli.csproj -verbosity:detailed /p:Configuration=Release /p:Version=${{ env.INNO_VERSION }}
+
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: nuget-package
         path: "*.nupkg"
-
 
   publish:
     name: Publish release to NuGet
