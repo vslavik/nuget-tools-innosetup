@@ -1,1 +1,4 @@
 *.nupkg
+inst/
+bin/
+obj/

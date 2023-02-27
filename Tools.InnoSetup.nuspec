@@ -11,23 +11,27 @@
         <summary>Inno Setup tools packaged for NuGet.</summary>
         <description>Inno Setup tools packaged for NuGet.
 
-This is an unofficial package of the Inno Setup installer, intended for use as
-a NuGet dependency.
+            This is an unofficial package of the Inno Setup installer, intended for use as
+            a NuGet dependency.
 
-This package is kept up to date and with upstream IS releases and includes the
-following:
+            This package is kept up to date and with upstream IS releases and includes the
+            following:
 
- - Unicode build of Inno Setup
- - Inno Setup Preprocessor
- - encryption support
- - official translations of Inno Setup
+            - Unicode build of Inno Setup
+            - Inno Setup Preprocessor
+            - encryption support
+            - official translations of Inno Setup
         </description>
         <copyright>Jordan Russell {http://www.jrsoftware.org/}</copyright>
         <language>en-US</language>
         <tags>installer inno innosetup</tags>
+        <packageTypes>
+            <packageType name="DotnetTool" />
+        </packageTypes>
     </metadata>
 
     <files>
+        <file src="dotnet-tool\bin\Release\net6.0\publish\**" target="tools\net6.0\any" />
         <file src="license.txt" target="" />
         <file src="README.md" target="" />
         <file src="Tools.InnoSetup.props" target="build" />

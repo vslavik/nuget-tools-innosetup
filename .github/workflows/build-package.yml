@@ -26,8 +26,12 @@ jobs:
     - name: List installed files
       run: gci inst -Recurse -File
 
+    - name: Set InnoSetup Version in C#
+      run: echo ^"${{ env.INNO_VERSION }}^";} >> ./dotnet-tool/InnoSetupVersion.cs
+      shell: cmd
+
     - name: Build NuGet package
-      run: nuget pack Tools.InnoSetup.nuspec -Verbosity detailed
+      run: dotnet pack ./dotnet-tool/Tools.InnoSetup.csproj -verbosity:detailed /p:Configuration=Release
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
