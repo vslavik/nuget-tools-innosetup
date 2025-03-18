@@ -22,9 +22,17 @@ following:
 How to install
 --------------
 
+As any other NuGet package, e.g.
+
 ```
 dotnet add package Tools.InnoSetup
 ```
+
+The package provides the following properties to aid build integration:
+- `$(InnoSetupDir)` points to the tools directory of the installed package, with Inno Setup files
+- `$(InnoSetupCompiler)` points directly at the `ISCC.exe` compiler
+
+This allows easy execution as e.g. `<Exec Command="$(InnoSetupCompiler) setup.iss"/>` in MSBuild.
 
 
 How to build it
