@@ -1,7 +1,7 @@
 name: Build NuGet package
 
 env:
-  INNO_VERSION: 6.3.1
+  INNO_VERSION: 6.4.2
 
 on: [push, pull_request]
 
@@ -19,9 +19,6 @@ jobs:
 
     - name: Install Inno Setup
       run: Start-Process ./installer.exe -NoNewWindow -Wait -ArgumentList "/verysilent /allusers /dir=inst"
-
-    - name: Download encryption module
-      run: curl -L -o inst/ISCrypt.dll https://jrsoftware.org/download.php/iscrypt.dll
 
     - name: List installed files
       run: gci inst -Recurse -File
