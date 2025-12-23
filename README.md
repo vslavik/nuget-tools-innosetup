@@ -6,17 +6,13 @@ NuGet package for Inno Setup
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Tools.InnoSetup)](https://www.nuget.org/packages/Tools.InnoSetup)
 [![Github Workflow Build Status](https://github.com/vslavik/nuget-tools-innosetup/workflows/Build%20NuGet%20package/badge.svg)](https://github.com/vslavik/nuget-tools-innosetup/actions)
 
-This is an unofficial package of the Inno Setup installer, intended for use as
+This is an unofficial package of the [Inno Setup](https://jrsoftware.org/isinfo.php) installer, intended for use as
 a NuGet dependency. It is published to the
 [nuget.org repository](https://www.nuget.org/packages/Tools.InnoSetup/).
 
-This package is kept up to date and with upstream IS releases and includes the
-following:
+This package is kept up to date and with upstream IS releases and includes all its components, including the official translations.
 
- - Unicode build of Inno Setup
- - Inno Setup Preprocessor
- - encryption support
- - official translations of Inno Setup
+See the [official changelog](https://jrsoftware.org/files/is6-whatsnew.htm) for details on each release.
 
 
 How to install
