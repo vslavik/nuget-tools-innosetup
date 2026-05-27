@@ -12,8 +12,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - uses: nuget/setup-nuget@v2
+    - uses: actions/checkout@v6
+    - uses: nuget/setup-nuget@v3
 
     - name: Download Inno Setup installer
       run: curl -L -o installer.exe https://github.com/jrsoftware/issrc/releases/download/is-${{ env.INNO_VERSION_TAG }}/innosetup-${{ env.INNO_VERSION }}.exe
@@ -28,7 +28,7 @@ jobs:
       run: nuget pack Tools.InnoSetup.nuspec -Verbosity detailed
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: nuget-package
         path: "*.nupkg"
@@ -41,11 +41,11 @@ jobs:
     needs: build
     steps:
       - name: Fetch artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: nuget-package
 
-      - uses: nuget/setup-nuget@v2
+      - uses: nuget/setup-nuget@v3
         with:
           nuget-api-key: ${{ secrets.NUGET_API_KEY }}
           nuget-api-key-source: https://www.nuget.org/api/v2/package
