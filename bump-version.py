@@ -36,24 +36,30 @@ def bump_version_in_nuspec(version: str) -> None:
 def bump_version_in_workflow(version: str) -> None:
     """Update version in .github/workflows/build-package.yml file."""
     workflow_file = Path(__file__).parent / ".github" / "workflows" / "build-package.yml"
+    version_tag = version.replace('.', '_')
 
     if not workflow_file.exists():
         raise FileNotFoundError(f"File not found: {workflow_file}")
 
     content = workflow_file.read_text(encoding='latin-1')
 
-    # Replace INNO_VERSION environment variable
+    # Replace Inno Setup version environment variables
     new_content = re.sub(
         r'(INNO_VERSION:\s*)[^\s]+',
         rf'\g<1>{version}',
         content
+    )
+    new_content = re.sub(
+        r'(INNO_VERSION_TAG:\s*)[^\s]+',
+        rf'\g<1>{version_tag}',
+        new_content
     )
 
     if content == new_content:
         print(f"Warning: No INNO_VERSION found in {workflow_file}")
     else:
         workflow_file.write_text(new_content, encoding='latin-1')
-        print(f"✓ Updated INNO_VERSION to {version} in .github/workflows/build-package.yml")
+        print(f"✓ Updated INNO_VERSION to {version} and INNO_VERSION_TAG to {version_tag} in .github/workflows/build-package.yml")
 
 
 def validate_version(version: str) -> bool:
