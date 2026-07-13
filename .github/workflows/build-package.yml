@@ -17,7 +17,7 @@ jobs:
     - uses: nuget/setup-nuget@v3
 
     - name: Download Inno Setup installer
-      run: curl -f --show-error -L -o installer.exe https://github.com/jrsoftware/issrc/releases/download/is-${{ env.INNO_VERSION_TAG }}/innosetup-${{ env.INNO_VERSION }}-${{ env.INNO_ARCH }}.exe
+      run: curl -f --retry 5 --retry-all-errors --show-error -L -o installer.exe https://github.com/jrsoftware/issrc/releases/download/is-${{ env.INNO_VERSION_TAG }}/innosetup-${{ env.INNO_VERSION }}-${{ env.INNO_ARCH }}.exe
 
     - name: Install Inno Setup
       run: |
