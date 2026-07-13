@@ -1,8 +1,9 @@
 name: Build NuGet package
 
 env:
-  INNO_VERSION: 6.7.3
-  INNO_VERSION_TAG: 6_7_3
+  INNO_VERSION: 7.0.2
+  INNO_VERSION_TAG: 7_0_2
+  INNO_ARCH: x64
 
 on: [push, pull_request]
 
@@ -16,7 +17,7 @@ jobs:
     - uses: nuget/setup-nuget@v3
 
     - name: Download Inno Setup installer
-      run: curl -L -o installer.exe https://github.com/jrsoftware/issrc/releases/download/is-${{ env.INNO_VERSION_TAG }}/innosetup-${{ env.INNO_VERSION }}.exe
+      run: curl -L -o installer.exe https://github.com/jrsoftware/issrc/releases/download/is-${{ env.INNO_VERSION_TAG }}/innosetup-${{ env.INNO_VERSION }}-${{ env.INNO_ARCH }}.exe
 
     - name: Install Inno Setup
       run: Start-Process ./installer.exe -NoNewWindow -Wait -ArgumentList "/verysilent /allusers /dir=inst"
