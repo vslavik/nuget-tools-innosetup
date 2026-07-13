@@ -33,7 +33,7 @@ following:
         <file src="license.txt" target="" />
         <file src="README.md" target="" />
         <file src="Tools.InnoSetup.props" target="build" />
-        <file src="inst\*.*" exclude="unins000.*" target="tools" />
+        <file src="inst\*.*" exclude="inst\unins000.*" target="tools" />
         <file src="inst\Languages\*.isl" target="tools\Languages" />
     </files>
 </package>
