@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Tools.InnoSetup</id>
-        <version>6.7.3</version>
+        <version>7.0.2</version>
         <title>Inno Setup tools</title>
         <authors>Vaclav Slavik, Jordan Russell</authors>
         <readme>README.md</readme>
@@ -18,7 +18,8 @@ a NuGet dependency.
 This package is kept up to date and with upstream IS releases and includes the
 following:
 
- - Unicode build of Inno Setup
+ - 64-bit edition of Inno Setup
+ - support for building both 32-bit and 64-bit installers
  - Inno Setup Preprocessor
  - encryption support
  - official translations of Inno Setup
@@ -32,7 +33,7 @@ following:
         <file src="license.txt" target="" />
         <file src="README.md" target="" />
         <file src="Tools.InnoSetup.props" target="build" />
-        <file src="inst\*.*" exclude="unins000.*" target="tools" />
+        <file src="inst\*.*" exclude="inst\unins000.*" target="tools" />
         <file src="inst\Languages\*.isl" target="tools\Languages" />
     </files>
 </package>

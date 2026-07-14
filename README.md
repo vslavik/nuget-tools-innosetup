@@ -12,7 +12,11 @@ a NuGet dependency. It is published to the
 
 This package is kept up to date and with upstream IS releases and includes all its components, including the official translations.
 
-See the [official changelog](https://jrsoftware.org/files/is6-whatsnew.htm) for details on each release.
+The package contains the x64 compiler edition and requires a Windows build host capable of running x64 applications.
+The compiler edition does not determine the architecture of generated installers: Inno Setup 7 builds x86 installers
+by default, and scripts can set `SetupArchitecture=x64` in their `[Setup]` section to build x64 installers.
+
+See the [official changelog](https://jrsoftware.org/files/is7-whatsnew.htm) for details on each release.
 
 
 How to install
@@ -36,7 +40,7 @@ How to build it
 
 To build the package yourself:
 
-1. Download the Inno Setup installer from https://jrsoftware.org/isdl.php
+1. Download the x64 Inno Setup installer from https://jrsoftware.org/isdl.php
 2. Run the installer with `/verysilent /allusers /dir=inst` flags
 3. Package into NuGet with `nuget pack Tools.InnoSetup.nuspec`
 
